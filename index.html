@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Piramal-Realty" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Piramal Realty</title>
+  </head>
+  <script src="main.js" defer></script>
+
+  <body id="home">
+    <!-- Header Section Starts-->
+    <header class="navbar">
+      <!-- Mobile Navbar Starts-->
+      <div class="responsive">
+        <img
+          id="hamburger"
+          src="./images/hamburger.svg"
+          alt="hamburger"
+          onclick="handleHamburgerClick()"
+        />
+        <div class="logo-container">
+          <img src="./images/logo-mobile.svg" alt="logo-mobile" />
+        </div>
+      </div>
+      <!-- Mobile Navbar Ends-->
+
+      <!-- Mobile Sidebar Starts -->
+      <div class="responsive-sidebar d-none">
+        <img
+          class="close-btn"
+          src="./images/close-btn.svg"
+          alt="close-btn"
+          onclick="handleCloseBtnClick()"
+          width="30px"
+        />
+
+        <div class="mob-icons">
+          <a href="#home" onclick="closeMenu()">
+            <img src="./images/home.svg" alt="home" />
+            <span >Home</span>
+          </a>
+
+          <a href="#projects" onclick="closeMenu()">
+            <img src="./images/projects.svg" alt="projects" />
+            <span>Projects</span>
+          </a>
+          <a href="#testimonials" onclick="closeMenu()">
+            <img src="./images/testimonials.svg" alt="testimonails" /><span>
+              Testimonails</span
+            >
+          </a>
+          
+          <a href="#about" onclick="closeMenu()">
+            <img src="./images/about.svg" alt="about" /><span>About</span>
+          </a>
+          <a href="#contact" onclick="closeMenu()">
+            <img src="./images/mob-contact.svg" alt="contact" /><span
+              >Contact Us</span
+            >
+          </a>
+        </div>
+      </div>
+      <!-- Mobile Sidebar Ends -->
+
+      <div class="logo" >
+        <picture>
+          <source media="(max-width:20px)" srcset="./images/logo.svg" />
+          <img src="./images/logo.svg" alt="logo" />
+        </picture>
+      </div>
+
+      <!-- Navbar Items Starts -->
+      <div class="nav-items ">
+        <a href="#" onclick="handleActive(this)">
+          <div class="home">
+            <picture>
+              <source media="(min-width:575px)" srcset="./images/home.svg" />
+              <img loading="lazy" src="./images/home.svg" alt="home" />
+            </picture>
+            <pre class="">  Home  </pre>
+            <p class="active-line"></p>
+          </div>
+        </a>
+
+        <a href="#projects" onclick="handleActive(this)">
+          <div class="projects">
+            <picture>
+              <source
+                media="(min-width:575px)"
+                srcset="./images/projects.svg"
+              />
+              <img loading="lazy" src="./images/projects.svg" alt="projects" />
+            </picture>
+            <p>Projects</p>
+            <p class="active-line d-none"></p>
+          </div>
+        </a>
+
+        <a href="#testimonials" onclick="handleActive(this)">
+          <div class="testimonails">
+            <picture>
+              <source
+                media="(min-width:575px)"
+                srcset="./images/testimonials.svg"
+              />
+              <img
+                loading="lazy"
+                src="./images/testimonials.svg"
+                alt="testimonails"
+              />
+            </picture>
+            <p>Testimonails</p>
+            <p class="active-line d-none"></p>
+          </div>
+        </a>
+
+
+        <a href="#about" onclick="handleActive(this)">
+          <div class="about">
+            <picture>
+              <source media="(min-width:575px)" srcset="./images/about.svg" />
+              <img loading="lazy" src="./images/about.svg" alt="about" />
+            </picture>
+            <p>About Us</p>
+            <p class="active-line d-none"></p>
+          </div>
+        </a>
+        <a href="#contact" onclick="handleActive(this)">
+          <div class="contact">
+            <picture>
+              <source media="(min-width:575px)" srcset="./images/contact.svg" />
+              <img loading="lazy" src="./images/contact.svg" alt="contact" />
+            </picture>
+            <p>Contact Us</p>
+            <p class="active-line d-none"></p>
+          </div>
+        </a>
+      </div>
+      <!-- Navbar Items Ends -->
+    </header>
+    <!-- Header Section Ends-->
+
+    <!-- Main Section -->
+    <main>
+      <!-- Banner Img Section -->
+      <div class="banner-img"></div>
+
+      <!-- Find Your Home Section Starts-->
+      <section class="home-section">
+        <p>FIND YOUR DREAM HOME</p>
+        <img loading="lazy" src="./images/line.svg" alt="line" />
+
+        <!-- Mobile Details Starts -->
+        <div class="mob-details">
+          <div class="mob-input-wrapper">
+            <input type="text" />
+            <button class="mob-search-btn">
+              <img src="./images/magnify.svg" alt="magnify" />
+              Search
+            </button>
+          </div>
+
+          <div class="mob-select-wrapper">
+            <select>
+              <option>Location</option>
+            </select>
+            <select>
+              <option value="1">Configuration Type</option>
+            </select>
+            <select>
+              <option value="1">Carpet Area</option>
+            </select>
+          </div>
+        </div>
+        <!-- Mobile Details Starts -->
+
+        <!-- Details Container Starts -->
+        <div class="detail">
+          <div>
+            <select>
+              <option value="1">Location</option>
+            </select>
+            <input type="text" placeholder="Search By Project Name" />
+            <button class="search-btn">
+              <img loading="lazy" src="./images/magnify.svg" alt="magnify" />
+              Search
+            </button>
+            <button class="clear-all">
+              <img
+                loading="lazy"
+                src="./images/clear-all.svg"
+                alt="clear-all"
+              />
+              Clear All
+            </button>
+          </div>
+          <div>
+            <select>
+              <option value="1">Configuration Type</option>
+            </select>
+            <select>
+              <option value="1">Carpet Area</option>
+            </select>
+          </div>
+        </div>
+        <!-- Details Container Starts -->
+      </section>
+      <!-- Find Your Home Section Ends-->
+
+      <!-- Projects Section Starts-->
+      <section id="projects" class="carousel-container">
+        <!-- Single Item Starts-->
+        <div class="details-container d-none">
+          <div class="sticky">
+            <img loading="lazy" src="./images/offer.svg" alt="offer" />
+            <p>No Stamp Duty Till 9th July 23*. Book & Save Upto Text</p>
+          </div>
+          <div class="flex-container">
+            <img loading="lazy" src="./images/img-1.svg" alt="img-1" />
+            <div class="right-container">
+              <p class="bldg-name">PIRAMAL MAHALAXMI</p>
+              <div class="item-container">
+                <div class="flex-items">
+                  <div class="item">
+                    <img
+                      loading="lazy"
+                      src="./images/location.svg"
+                      alt="location"
+                    />
+                    <span>Location:</span>
+                    <b>Thane, Mumbai</b>
+                  </div>
+                  <div class="item">
+                    <img loading="lazy" src="./images/area.svg" alt="area" />
+                    <span>Area:</span>
+                    <b>1400 to 2,100 Sq.Ft.</b>
+                  </div>
+                </div>
+                <div class="flex-items">
+                  <div class="item">
+                    <img
+                      loading="lazy"
+                      src="./images/location.svg"
+                      alt="location"
+                    />
+                    <span>Specifications:</span>
+                    <b>2 & 3 BHK</b>
+                  </div>
+                  <div class="item">
+                    <img loading="lazy" src="./images/area.svg" alt="area" />
+                    <span>Project Size:</span>
+                    <b>1 Building 106 Units</b>
+                  </div>
+                </div>
+                <div class="flex-items">
+                  <div class="item">
+                    <img
+                      loading="lazy"
+                      src="./images/location.svg"
+                      alt="location"
+                    />
+                    <span>Possession Date:</span>
+                    <b>06-2025</b>
+                  </div>
+                  <div class="item">
+                    <img loading="lazy" src="./images/area.svg" alt="area" />
+                    <span>Prices:</span>
+                    <b>80L - 7Cr*</b>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="btn-container"
+                style="margin: 30px 0 0 0; justify-content: end"
+              >
+                <button class="btn btn-gray">
+                  <img
+                    loading="lazy"
+                    src="./images/circle-info.svg"
+                    alt="circle-info"
+                  />
+                  Enquire Now
+                </button>
+                <button class="btn btn-orange">
+                  <img loading="lazy" src="./images/phone.svg" alt="phone" />
+                  Get Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Single Item Ends-->
+
+        <!-- Double Items Starts-->
+        <div class="double-section d-none">
+          <div>
+            <div class="sticky">
+              <img src="./images/offer.svg" alt="offer" />
+              <p>No Stamp Duty Till 9th July 23*. Book & Save Upto Text</p>
+            </div>
+            <div class="carousel-item">
+              <img loading="lazy" src="./images/double.svg" alt="img-1" />
+              <div>
+                <p class="bldg-name">PIRAMAL MAHALAXMI</p>
+                <div class="details-container">
+                  <!-- <div class="details">
+                    <div>
+                      <div class="text">
+                        <img
+                          loading="lazy"
+                          src="./images/location.svg"
+                          alt="location"
+                        />
+                        <span>Location:</span>
+                      </div>
+                      <p>Thane, Mumbai</p>
+                    </div>
+                    <div>
+                      <div class="text">
+                        <img loading="lazy" src="./images/area.svg" alt="area" />
+                        <span>Area</span>
+                      </div>
+                      <p>1400 to 2,100 Sq.Ft.</p>
+                    </div>
+                  </div> -->
+
+                  <div class="details">
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          loading="lazy"
+                          src="./images/price.svg"
+                          alt="price"
+                        />
+                        <span>Prices:</span>
+                      </div>
+                      <p class="price">80L - 7Cr*</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+                  </div>
+
+                  <div class="details">
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          loading="lazy"
+                          src="./images/price.svg"
+                          alt="price"
+                        />
+                        <span>Prices:</span>
+                      </div>
+                      <p class="price">80L - 7Cr*</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-container">
+                  <button class="btn btn-gray">
+                    <img
+                      loading="lazy"
+                      src="./images/circle-info.svg"
+                      alt="circle-info"
+                    />
+                    Enquire Now
+                  </button>
+                  <button class="btn btn-orange">
+                    <img loading="lazy" src="./images/phone.svg" alt="phone" />
+                    Get Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="sticky">
+              <img src="./images/offer.svg" alt="offer" />
+              <p>No Stamp Duty Till 9th July 23*. Book & Save Upto Text</p>
+            </div>
+            <div class="carousel-item">
+              <img loading="lazy" src="./images/double.svg" alt="" />
+              <div>
+                <p class="bldg-name">PIRAMAL MAHALAXMI</p>
+                <div class="details-container">
+                  <!-- <div class="details">
+                    <div>
+                      <div class="text">
+                        <img
+                          loading="lazy"
+                          src="./images/location.svg"
+                          alt="location"
+                        />
+                        <span>Location:</span>
+                      </div>
+                      <p>Thane, Mumbai</p>
+                    </div>
+                    <div>
+                      <div class="text">
+                        <img loading="lazy" src="./images/area.svg" alt="area" />
+                        <span>Area</span>
+                      </div>
+                      <p>1400 to 2,100 Sq.Ft.</p>
+                    </div>
+                  </div> -->
+
+                  <div class="details">
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          loading="lazy"
+                          src="./images/price.svg"
+                          alt="price"
+                        />
+                        <span>Prices:</span>
+                      </div>
+                      <p class="price">80L - 7Cr*</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+                  </div>
+
+                  <div class="details">
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          loading="lazy"
+                          src="./images/price.svg"
+                          alt="price"
+                        />
+                        <span>Prices:</span>
+                      </div>
+                      <p class="price">80L - 7Cr*</p>
+                    </div>
+
+                    <div>
+                      <div class="text">
+                        <img
+                          src="./images/specification.svg"
+                          alt="specification"
+                        />
+                        <span>Specifications:</span>
+                      </div>
+                      <p>2 & 3 BHK</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-container">
+                  <button class="btn btn-gray">
+                    <img
+                      loading="lazy"
+                      src="./images/circle-info.svg"
+                      alt="circle-info"
+                    />
+                    Enquire Now
+                  </button>
+                  <button class="btn btn-orange">
+                    <img loading="lazy" src="./images/phone.svg" alt="phone" />
+                    Get Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Double Items Ends-->
+
+        <!-- More than 3 item  Starts-->
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div>
+                  <div class="sticky">
+                    <img src="./images/offer.svg" alt="offer" loading="lazy" />
+                    <p>
+                      No Stamp Duty Till 9th July 23*. Book & Save Upto Text
+                    </p>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img-1.svg" alt="img-1" />
+                    <p class="bldg-name">PIRAMAL MAHALAXMI</p>
+
+                    <div class="details-container">
+                      <div class="details">
+                        <div>
+                          <div class="text">
+                            <img
+                              loading="lazy"
+                              src="./images/location.svg"
+                              alt="location"
+                            />
+                            <span>Location:</span>
+                          </div>
+                          <p>Thane, Mumbai</p>
+                        </div>
+                        <div>
+                          <div class="text">
+                            <img
+                              loading="lazy"
+                              src="./images/area.svg"
+                              alt="area"
+                            />
+                            <span>Area</span>
+                          </div>
+                          <p>1400 to 2,100 Sq.Ft.</p>
+                        </div>
+                      </div>
+                      <div class="details">
+                        <div>
+                          <div class="text">
+                            <img
+                              loading="lazy"
+                              src="./images/specification.svg"
+                              alt="specification"
+                            />
+                            <span>Specifications:</span>
+                          </div>
+                          <p>2 & 3 BHK</p>
+                        </div>
+
+                        <div>
+                          <div class="text">
+                            <img
+                              loading="lazy"
+                              src="./images/price.svg"
+                              alt="price"
+                            />
+                            <span>Prices:</span>
+                          </div>
+                          <p class="price">80L - 7Cr*</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="btn-container">
+                      <button class="btn btn-gray">
+                        <img
+                          loading="lazy"
+                          src="./images/circle-info.svg"
+                          alt="circle-info"
+                        />
+                        Enquire Now
+                      </button>
+                      <button class="btn btn-orange">
+                        <img
+                          loading="lazy"
+                          src="./images/phone.svg"
+                          alt="phone"
+                        />
+                        Get Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--prev"
+                data-glide-dir="<"
+              >
+                <img
+                  loading="lazy"
+                  class="slide-btn-left"
+                  src="./images/side-arrow.svg"
+                  alt=""
+                />
+              </button>
+              <button
+                class="glide__arrow glide__arrow--next"
+                data-glide-dir=">"
+              >
+                <img
+                  loading="lazy"
+                  class="slide-btn-right"
+                  src="./images/side-arrow.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section Ends-->
+
+      <!-- Testimonials Section Starts-->
+      <section
+        id="testimonials"
+        data-bg="./images/testimonials-bg.svg"
+        class="testimonials-container lazy-img"
+      >
+        <!-- Mobile Testimonials Starts -->
+        <div class="glide1">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="mob-testimonial">
+                  <h5>TESTIMONIALS</h5>
+                  <div class="mob-test">
+                    <div class="user">
+                      <img src="./images/user.svg" alt="user" />
+                      <div>
+                        <b>John Reeves</b>
+                        <p>Sales Manager, Slack</p>
+                      </div>
+                    </div>
+                    <p>It was a Great Experience !!</p>
+                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <div>
+                      <p>
+                        Piramal Revanta is fast emerging as the contemporary
+                        architectural landmark of Mulund. A luxury 12 acre
+                        development with up to 50% open spaces in the heart of
+                        Mulund. Sleek, streamlined structures that inspire awe
+                        forms a veritable address that’s a benchmark. Majestic
+                        skyscrapers up to 47 storeys offer thoughtfully designed
+                        layouts, quality finishes and unparalleled amenities
+                        With studio to 4 bed residences where you can fulfill
+                        all your desires of life
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="mob-testimonial">
+                  <h5>TESTIMONIALS</h5>
+                  <div class="mob-test">
+                    <div class="user">
+                      <img src="./images/user.svg" alt="user" />
+                      <div>
+                        <b>John Reeves</b>
+                        <p>Sales Manager, Slack</p>
+                      </div>
+                    </div>
+                    <p>It was a Great Experience !!</p>
+                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <div>
+                      <p>
+                        Piramal Revanta is fast emerging as the contemporary
+                        architectural landmark of Mulund. A luxury 12 acre
+                        development with up to 50% open spaces in the heart of
+                        Mulund. Sleek, streamlined structures that inspire awe
+                        forms a veritable address that’s a benchmark. Majestic
+                        skyscrapers up to 47 storeys offer thoughtfully designed
+                        layouts, quality finishes and unparalleled amenities
+                        With studio to 4 bed residences where you can fulfill
+                        all your desires of life
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="mob-testimonial">
+                  <h5>TESTIMONIALS</h5>
+                  <div class="mob-test">
+                    <div class="user">
+                      <img src="./images/user.svg" alt="user" />
+                      <div>
+                        <b>John Reeves</b>
+                        <p>Sales Manager, Slack</p>
+                      </div>
+                    </div>
+                    <p>It was a Great Experience !!</p>
+                    <p class="star">⭐⭐⭐⭐⭐</p>
+                    <div>
+                      <p>
+                        Piramal Revanta is fast emerging as the contemporary
+                        architectural landmark of Mulund. A luxury 12 acre
+                        development with up to 50% open spaces in the heart of
+                        Mulund. Sleek, streamlined structures that inspire awe
+                        forms a veritable address that’s a benchmark. Majestic
+                        skyscrapers up to 47 storeys offer thoughtfully designed
+                        layouts, quality finishes and unparalleled amenities
+                        With studio to 4 bed residences where you can fulfill
+                        all your desires of life
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div>
+        </div>
+        <!-- Mobile Testimonials Ends -->
+
+        <!--Testimonials Starts  -->
+        <div class="testimonials">
+          <p class="heading">Testimonails</p>
+          <div class="flex-container">
+            <div>
+              <div class="testimonial">
+                <img
+                  class="lazy-img"
+                  data-lazy="./images/user.svg"
+                  alt="user"
+                />
+                <div>
+                  <p>John Reeves</p>
+                  <p>Sales Manager, Slack</p>
+                </div>
+              </div>
+              <div class="testimonial">
+                <img
+                  class="lazy-img"
+                  data-lazy="./images/user.svg"
+                  alt="user"
+                />
+                <div>
+                  <p>John Reeves</p>
+                  <p>Sales Manager, Slack</p>
+                </div>
+              </div>
+              <div class="testimonial">
+                <img
+                  class="lazy-img"
+                  data-lazy="./images/user.svg"
+                  alt="user"
+                />
+                <div>
+                  <p>John Reeves</p>
+                  <p>Sales Manager, Slack</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p class="heading">It was a Great Experience !!</p>
+              <p>⭐⭐⭐⭐⭐</p>
+              <p class="para">
+                PIRAMAL Revanta is fast emerging as the contemporary
+                architectural landmark of Mulund. A luxury 12 acre development
+                with up to 50% open spaces in the heart of Mulund. Sleek,
+                streamlined structures that inspire awe forms a veritable
+                address that’s a benchmark. Majestic skyscrapers up to 47
+                storeys offer thoughtfully designed layouts, quality finishes
+                and unparalleled amenities With studio to 4 bed residences where
+                you can fulfill all your desires of life
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Testimonials Ends  -->
+      </section>
+      <!-- Testimonials Section Ends-->
+
+      <!-- Video Section Starts -->
+      <section class="video-section lazy-img">
+        <iframe
+          class="lazy-img"
+          width="100%"
+          height="500"
+          data-bg="https://www.youtube.com/embed/kcUC3QmS0Q8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <!-- Video Section Ends -->
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <p class="heading">ABOUT PIRAMAL REALTY</p>
+        <img loading="lazy" src="./images/about-line.svg" alt="about-line" />
+        <p class="text">
+          We strive to create spaces that significantly improve the quality of
+          life for individuals and families, by setting gold standard in
+          customer-centricity, architectural design, quality and safety. To
+          ensure that our developments are of the highest calibre, we seek out
+          the world’s most renowned and leading experts in the real estate
+          sector, who serve as collaborators for each of our endeavours.
+        </p>
+        <div class="box-container">
+          <div class="box">
+            <p>149</p>
+            <span>Buildings Build</span>
+          </div>
+          <div class="box">
+            <p>7,191</p>
+            <span>Homes Delivered</span>
+          </div>
+          <div class="box">
+            <p>27</p>
+            <span>Buildings Under Construction</span>
+          </div>
+        </div>
+      </section>
+      <!-- Contact-Us Section Starts-->
+      <section id="contact" class="contact-us">
+        <p>CONTACT US</p>
+        <form>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+
+            <div class="mob-container">
+              <select
+                id="countryCodeSelect"
+                name="lcc"
+                autocomplete="tel-country-code"
+              >
+                <option data-countryCode="IN" value="91" selected>+91</option>
+                <optgroup label="Out of India">
+                  <option data-countryCode="AU" value="61">
+                    Australia (+61)
+                  </option>
+                  <option data-countryCode="AT" value="43">
+                    Austria (+43)
+                  </option>
+                  <option data-countryCode="BD" value="880">
+                    Bangladesh (+880)
+                  </option>
+                  <option data-countryCode="BE" value="+32">
+                    Belgium (+32)
+                  </option>
+                  <option data-countryCode="BR" value="+55">
+                    Brazil (+55)
+                  </option>
+                  <option data-countryCode="CA" value="+1">Canada (+1)</option>
+                  <option data-countryCode="CZ" value="+42">
+                    Czech Republic (+42)
+                  </option>
+                  <option data-countryCode="DK" value="45">
+                    Denmark (+45)
+                  </option>
+                  <option data-countryCode="EG" value="20">Egypt (+20)</option>
+                  <option data-countryCode="FR" value="33">France (+33)</option>
+                  <option data-countryCode="DE" value="49">
+                    Germany (+49)
+                  </option>
+                  <option data-countryCode="HK" value="852">
+                    Hong Kong (+852)
+                  </option>
+                  <option data-countryCode="IN" value="91">India (+91)</option>
+                  <option data-countryCode="ID" value="62">
+                    Indonesia (+62)
+                  </option>
+                  <option data-countryCode="IL" value="972">
+                    Israel (+972)
+                  </option>
+                  <option data-countryCode="IT" value="39">Italy (+39)</option>
+                  <option data-countryCode="JP" value="81">Japan (+81)</option>
+                  <option data-countryCode="MY" value="60">
+                    Malaysia (+60)
+                  </option>
+                  <option data-countryCode="MV" value="960">
+                    Maldives (+960)
+                  </option>
+                  <option data-countryCode="NP" value="977">
+                    Nepal (+977)
+                  </option>
+                  <option data-countryCode="NZ" value="64">
+                    New Zealand (+64)
+                  </option>
+                  <option data-countryCode="QA" value="974">
+                    Qatar (+974)
+                  </option>
+                  <option data-countryCode="RU" value="7">Russia (+7)</option>
+                  <option data-countryCode="SA" value="966">
+                    Saudi Arabia (+966)
+                  </option>
+                  <option data-countryCode="SG" value="65">
+                    Singapore (+65)
+                  </option>
+                  <option data-countryCode="ZA" value="27">
+                    South Africa (+27)
+                  </option>
+                  <option data-countryCode="LK" value="94">
+                    Sri Lanka (+94)
+                  </option>
+                  <option data-countryCode="SE" value="46">Sweden (+46)</option>
+                  <option data-countryCode="CH" value="41">
+                    Switzerland (+41)
+                  </option>
+                  <option data-countryCode="GB" value="44">UK (+44)</option>
+                  <option data-countryCode="AE" value="971">
+                    United Arab Emirates (+971)
+                  </option>
+                  <option data-countryCode="US" value="1">USA (+1)</option>
+                </optgroup>
+              </select>
+
+              <input type="tel" placeholder="Enter Your Number" />
+            </div>
+          </div>
+
+          <textarea
+            cols="30"
+            rows="10"
+            placeholder="Write a message here"
+          ></textarea>
+          <br />
+          <button>SUBMIT</button>
+        </form>
+      </section>
+      <!-- Contact-Us Section Ends-->
+    </main>
+
+    <!-- Footer Section Starts -->
+    <footer class="footer">
+      <p>
+        <b>Disclaimer: </b> AIX Property Secure, is a product structured under
+        our company, AIX International Properties. AIX International Properties
+        is a real estate company incorporated in the United Arab Emirates. AIX
+        International Properties is duly licensed by Dubai Economic Department
+        (DED) and Dubai Real Estate Regulatory Authority (RERA), for conducting
+        the activity of leasing and management of other people’s property under
+        the activity number 701003. AIX Property Secure allows only investors to
+        invest, once they have considered their investment objectives, risk
+        tolerance and have seeked independent advice from professionals and
+        experts if necessary.
+      </p>
+    </footer>
+    <!-- Footer Section Ends -->
+
+    <!-- Sticky Footer Starts -->
+    <div class="footer-sticky">
+      <a href="tel:88983"><img src="./images/call.svg" alt="call" /> Call Us</a>
+      <a onclick="showModal()"
+        ><img src="./images/email.svg" alt="email" /> Enquire</a
+      >
+      <a href="https://wa.me"
+        ><img src="./images/whatsapp.svg" alt="whatsapp" /> WhatsApp</a
+      >
+    </div>
+    <!-- Sticky Footer Ends -->
+
+    <!-- Mobile Sticky Starts -->
+    <div class="mob-sticky">
+      <img src="./images/sticky-call.svg" alt="call" />
+      <img src="./images/sticky-form.svg" alt="form" />
+      <img src="./images/sticky-whatsapp.svg" alt="whatsapp" />
+    </div>
+    <!-- Mobile Sticky Ends -->
+
+    <!-- Modal Container Starts -->
+    <dialog class="modal-container">
+      <img
+        src="./images/cross.svg"
+        class="cross-btn"
+        alt="cross"
+        onclick="closeModal()"
+      />
+      <img src="./images/logo.svg" alt="logo" />
+      <div class="flex-container">
+        <div class="item">
+          <img src="images/modal-call.svg" alt="modal-call" />
+          <p>Instant Call Back</p>
+        </div>
+        <div class="item">
+          <img src="./images/modal-taxi.svg" alt="modal-taxi" />
+          <p>Free Pickup & Drop</p>
+        </div>
+        <div class="item">
+          <img src="images/modal-rupee.svg" alt="modal-rupee" />
+          <p>Best Price Guaranteed</p>
+        </div>
+      </div>
+      <div class="request-call">
+        <p>REQUEST A CALL BACK</p>
+        <input type="text" placeholder="Name Here..." />
+        <div class="mob-container">
+          <select aria-placeholder="+91">
+            <option >+91</option>
+          </select>
+          <input type="text" placeholder="Name Here..." />
+        </div>
+        <button class="btn-orange">Submit</button>
+      </div>
+    </dialog>
+    <!-- Modal Container Ends -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script>
+      // script.js
+     
+    </script>
+  </body>
+</html>
