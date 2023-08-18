@@ -34,6 +34,7 @@
 
       <!-- Mobile Sidebar Starts -->
       <div class="responsive-sidebar d-none">
+        <img src="./images/logo-mobile.svg" alt="logo-mob">
         <img
           class="close-btn"
           src="./images/close-btn.svg"
@@ -79,18 +80,18 @@
 
       <!-- Navbar Items Starts -->
       <div class="nav-items ">
-        <a href="#" onclick="handleActive(this)">
+        <a href="#" id="home-a" onclick="handleActive(this)">
           <div class="home">
             <picture>
               <source media="(min-width:575px)" srcset="./images/home.svg" />
               <img loading="lazy" src="./images/home.svg" alt="home" />
             </picture>
             <pre class="">  Home  </pre>
-            <p class="active-line"></p>
+            <p class="active-line d-none"></p>
           </div>
         </a>
 
-        <a href="#projects" onclick="handleActive(this)">
+        <a id="projects-a" href="#projects" onclick="handleActive(this)">
           <div class="projects">
             <picture>
               <source
@@ -104,7 +105,7 @@
           </div>
         </a>
 
-        <a href="#testimonials" onclick="handleActive(this)">
+        <a href="#testimonials" id="testimonials-a" onclick="handleActive(this)">
           <div class="testimonails">
             <picture>
               <source
@@ -123,7 +124,7 @@
         </a>
 
 
-        <a href="#about" onclick="handleActive(this)">
+        <a href="#about" id="about-a" onclick="handleActive(this)">
           <div class="about">
             <picture>
               <source media="(min-width:575px)" srcset="./images/about.svg" />
@@ -133,7 +134,7 @@
             <p class="active-line d-none"></p>
           </div>
         </a>
-        <a href="#contact" onclick="handleActive(this)">
+        <a href="#contact" id="contact-a" onclick="handleActive(this)">
           <div class="contact">
             <picture>
               <source media="(min-width:575px)" srcset="./images/contact.svg" />
@@ -154,7 +155,7 @@
       <div class="banner-img"></div>
 
       <!-- Find Your Home Section Starts-->
-      <section class="home-section">
+      <section id="home" class="home-section">
         <p>FIND YOUR DREAM HOME</p>
         <img loading="lazy" src="./images/line.svg" alt="line" />
 
@@ -557,7 +558,7 @@
                       No Stamp Duty Till 9th July 23*. Book & Save Upto Text
                     </p>
                   </div>
-                  <div class="carousel-item">
+                     <div class="carousel-item">
                     <img src="./images/img-1.svg" alt="img-1" />
                     <p class="bldg-name">PIRAMAL MAHALAXMI</p>
 
@@ -875,6 +876,7 @@
           </div>
         </div>
       </section>
+
       <!-- Contact-Us Section Starts-->
       <section id="contact" class="contact-us">
         <p>CONTACT US</p>
@@ -1018,7 +1020,7 @@
     <!-- Mobile Sticky Starts -->
     <div class="mob-sticky">
       <img src="./images/sticky-call.svg" alt="call" />
-      <img src="./images/sticky-form.svg" alt="form" />
+      <img src="./images/sticky-form.svg" alt="form" onclick="showModal()" />
       <img src="./images/sticky-whatsapp.svg" alt="whatsapp" />
     </div>
     <!-- Mobile Sticky Ends -->

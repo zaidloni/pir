@@ -53,14 +53,7 @@ const lazyLoad = (target) => {
 };
 targets.forEach(lazyLoad);
 
-// Navbar Active Line Handler
-function handleActive(e) {
-  let activeArr = Array.from(document.getElementsByClassName("active-line"));
-  for (let i = 0; i < activeArr.length; i++) {
-    activeArr[i].classList.add("d-none");
-  }
-  e.querySelector(".active-line").classList.remove("d-none");
-}
+
 
 // Mobile Hamburger Menu Handler
 function handleHamburgerClick() {
@@ -101,5 +94,37 @@ function closeModal() {
 // Modal Container Show
 function showModal() {
   document.querySelector(".modal-container").showModal();
+  document.querySelector(".modal-container").focus();
+  document.querySelector(".modal-container").blur();
+
+
   document.body.style.filter = "blur(5px)";
 }
+
+// Navbar Active Line Handler
+function handleActive(e) {
+
+  let activeArr = Array.from(document.getElementsByClassName("active-line"));
+  for (let i = 0; i < activeArr.length; i++) {
+    activeArr[i].classList.add("d-none");
+  }
+  e.querySelector(".active-line").classList.remove("d-none");
+}
+
+const sectionData = ["home", "projects", "testimonials", "about", "contact"];
+
+const handleScroll = () => {
+  for (const section of sectionData) {
+    const sectionElement = document.getElementById(section);
+    if (sectionElement) {
+      const sectionTop = sectionElement.offsetTop - 115;
+      const sectionBottom = sectionTop + sectionElement.clientHeight;
+
+      if (window.scrollY >= sectionTop && window.scrollY <= sectionBottom) {
+        let  a = document.getElementById(`${section}-a`)
+        handleActive(a)
+      }
+    }
+  }
+};
+window.addEventListener('scroll', handleScroll)
